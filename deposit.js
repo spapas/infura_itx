@@ -2,7 +2,7 @@ const { ethers } = require("ethers");
 
 async function main() {
   console.log("Starting")
-  send_token_amount = "0.1" // in matic
+  send_token_amount = "1" // in matic
   
   const itx = new ethers.providers.JsonRpcProvider(process.env.NETWORK_API);
 
@@ -22,7 +22,7 @@ async function main() {
   });
   console.log("Mining deposit transaction...");
   console.log(
-    `https://mumbai.polygonscan.com/tx/${depositTx.hash}`
+    `https://polygonscan.com/tx/${depositTx.hash}`
   );
 
   // Waiting for the transaction to be mined
